@@ -17,7 +17,7 @@ import java.util.List;
 public class CalculateController {
 
     private static int totalPrice = 0;
-
+    
     @RequestMapping("order-menu")
     public String send_total_price(@RequestParam String order_name, @RequestParam String order_count){
         List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>();
