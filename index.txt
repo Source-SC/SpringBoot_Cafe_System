@@ -1,0 +1,11 @@
+# API Server
+    port : 8787
+
+# Order
+    port : 8092
+
+# Calculator
+    port : 8091
+
+# Management
+    port : 8090

@@ -17,7 +17,7 @@ import java.util.List;
 public class CalculateController {
 
     private static int totalPrice = 0;
-    
+
     @RequestMapping("order-menu")
     public String send_total_price(@RequestParam String order_name, @RequestParam String order_count){
         List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>();
@@ -32,7 +32,7 @@ public class CalculateController {
         map.add("order_name", order_name);
 
         // REST API 호출
-        String result = restTemplate.postForObject("http://localhost:8090/price/", map, String.class);
+        String result = restTemplate.postForObject("http://menu-service/price/", map, String.class);
         totalPrice = totalPrice + Integer.valueOf(order_count) * Integer.valueOf(result);
         return String.valueOf(totalPrice);
     }

@@ -30,7 +30,7 @@ public class OrderController {
         map.add("order_count", count);
 
         // REST API 호출
-        String result = restTemplate.postForObject("http://localhost:8091/order-menu/", map, String.class);
+        String result = restTemplate.postForObject("http://calculate-service/order-menu/", map, String.class);
         System.out.println("------------------ TEST 결과 ------------------");
         System.out.println(result);
 

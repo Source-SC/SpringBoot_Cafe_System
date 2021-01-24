@@ -1,0 +1,22 @@
+server:
+  port: 9001
+
+
+# -- Default spring configuration
+
+spring:
+  application:
+    name: test-server
+
+# -- Eureka client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:9000/eureka/}
+
+## -- Zuul
+#zuul:
+#  routes:
+#    user-service:
+#      path: /user/**
+#      service-id: USER-SERVICE
